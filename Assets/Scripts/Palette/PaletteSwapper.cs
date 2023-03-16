@@ -17,6 +17,7 @@ public class PaletteSwapper : MonoBehaviour
 
     private Material paletteMat;
 
+    //Gradient implementeren
     public Gradient test;
     
     void OnEnable() 

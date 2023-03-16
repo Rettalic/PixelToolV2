@@ -30,19 +30,19 @@ public class MainMenu : Menu
         }
     }
 
-    public void OnNewGameClicked() 
+    public void OnNewToolClicked() 
     {
         saveSlotsMenu.ActivateMenu(false);
         this.DeactivateMenu();
     }
 
-    public void OnLoadGameClicked() 
+    public void OnLoadToolClicked() 
     {
         saveSlotsMenu.ActivateMenu(true);
         this.DeactivateMenu();
     }
 
-    public void OnContinueGameClicked() 
+    public void OnContinueToolClicked() 
     {
         DisableMenuButtons();
         // save the game anytime before loading a new scene
