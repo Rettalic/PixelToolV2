@@ -8,16 +8,16 @@ using TMPro;
 public class PixelizerManager : MonoBehaviour
 {
     [SerializeField] private Material pixelizeMaterial;
-    [SerializeField] private Texture texture;
     [SerializeField] private int pixelSize;
     private DynamicPixelizer dynamicPixelizer;
+    public Texture texture;
 
     public TMP_Text text;
     public Slider slider;
 
     private void Awake()
     {
-        dynamicPixelizer = new DynamicPixelizer();
+        UpdateTexture();
         UpdateText(slider.value);
         slider.onValueChanged.AddListener(UpdateText);
     }
@@ -32,5 +32,10 @@ public class PixelizerManager : MonoBehaviour
     public void Pixelate()
     {
         pixelizeMaterial.SetTexture("_MainTex", dynamicPixelizer.Pixelize(texture, pixelSize));
+    }
+
+    public void UpdateTexture()
+    {
+        dynamicPixelizer = new DynamicPixelizer();
     }
 }

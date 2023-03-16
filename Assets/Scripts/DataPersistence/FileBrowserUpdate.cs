@@ -9,6 +9,7 @@ using System.IO;
 
 public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
 {
+    public PixelizerManager PixelizerManager;
     public RawImage rawImage;
     public RawImage rawImage2;
     public byte[] imgData;
@@ -41,6 +42,8 @@ public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
                 var uwrTexture = DownloadHandlerTexture.GetContent(uwr);
                 rawImage.texture = uwrTexture;
                 imgData = uwrTexture.EncodeToPNG();
+                //PixelizerManager.texture = uwrTexture;  //Still have to implement a way to update the texture 
+                //PixelizerManager.UpdateTexture();
             }
         }
     }

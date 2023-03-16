@@ -18,6 +18,7 @@ public class SaveSlotsMenu : Menu
     private SaveSlot[] saveSlots;
 
     private bool isLoadingTool = false;
+    public int sceneIndex = 1;
 
     private void Awake() 
     {
@@ -62,7 +63,7 @@ public class SaveSlotsMenu : Menu
         // save the game anytime before loading a new scene
         DataPersistenceManager.instance.SaveTool();
         // load the scene
-        SceneManager.LoadSceneAsync("SampleScene");
+        SceneManager.LoadSceneAsync(sceneIndex);
     }
 
     public void OnClearClicked(SaveSlot saveSlot) 

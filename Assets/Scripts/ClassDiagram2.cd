@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ToolData">
+    <Position X="10.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAIAAAAAQAAAAgAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DataPersistence\Data\ToolData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataPersistenceManager">
+    <Position X="5.75" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IBAQABAAABgAAAACABAgAAAgIEBAAAIJEGAgKAAACEA=</HashCode>
+      <FileName>Assets\Scripts\DataPersistence\DataPersistenceManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileBrowserUpdate" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="8" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAQAAAAAAAAAAAQAAAAAAAACYgAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\DataPersistence\FileBrowserUpdate.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FileDataHandler">
+    <Position X="8" Y="5.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgKIAAAgAAABEAEAAAAAAAAEAIEAAAAAAAAAAACA=</HashCode>
+      <FileName>Assets\Scripts\DataPersistence\FileDataHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SerializableDictionary&lt;TKey, TValue&gt;" BaseTypeListCollapsed="true">
+    <Position X="8" Y="9.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAIAAAAAAAAAAAAAABAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DataPersistence\SerializableTypes\SerializableDictionary.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ConfirmationPopupMenu" Collapsed="true">
+    <Position X="7" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQQAAAAAAAAAIAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\ConfirmationPopupMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CreateNewSaveSlot">
+    <Position X="3.75" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAIAAA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\CreateNewSaveSlot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMenu" Collapsed="true">
+    <Position X="11.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAACAFgAAAEAQAJAAgAgAAAAAAAAAAAAEBAAA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Menu" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveSlot">
+    <Position X="3.75" Y="7.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAhAAQAAAAACAgAAAgAAAAAAAAAAgAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\SaveSlot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveSlotsMenu" Collapsed="true">
+    <Position X="9.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQwAAIAAAAAAIAAgAQAAEAAAAAAAAAEMAEA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\SaveSlotsMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SetProjectName" BaseTypeListCollapsed="true">
+    <Position X="2" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAMAAAQAAAAAAAAAAgQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\SetProjectName.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PaletteSwapper">
+    <Position X="13.25" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAABAQAQAgAAAABAAwAAAIAAIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Palette\PaletteSwapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PixelateEffect">
+    <Position X="15.25" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACgIAAAAACAAAAAAAAAAAAAIAAAEAAAAAAg=</HashCode>
+      <FileName>Assets\Scripts\PixelateEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DynamicPixelizer">
+    <Position X="15.25" Y="8" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAACCAAAAAAUAJAAAAAAAAAABACAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\Pixelizer\DynamicPixelizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PixelizerManager">
+    <Position X="13.25" Y="8.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAgIAAAAAAAAAAAAAAAAAogIAAAEAAAAAEg=</HashCode>
+      <FileName>Assets\Scripts\Pixelizer\PixelizerManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolSettings" BaseTypeListCollapsed="true">
+    <Position X="10.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAYBAQAAAAAAAAQAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Settings\ToolSettings.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CommandManager">
+    <Position X="17.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQABAQAAAAAAAABAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UndoRedo\CommandManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IDataPersistence">
+    <Position X="13.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DataPersistence\IDataPersistence.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ICommand">
+    <Position X="15.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UndoRedo\ICommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
