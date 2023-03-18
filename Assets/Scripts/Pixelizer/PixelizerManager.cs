@@ -7,35 +7,48 @@ using TMPro;
 
 public class PixelizerManager : MonoBehaviour
 {
-    [SerializeField] private Material pixelizeMaterial;
-    [SerializeField] private int pixelSize;
     private DynamicPixelizer dynamicPixelizer;
-    public Texture texture;
+    [SerializeField] private int pixelSize;
+    public PaletteSwapper swapper;
+
+
+    public Texture inputTexture;    //Texture you import
+    public RawImage SourceTexture;  //Original img
+    public RawImage outputTexture;  //Pixelate img
 
     public TMP_Text text;
     public Slider slider;
 
     private void Awake()
     {
-        UpdateTexture();
+        dynamicPixelizer = new DynamicPixelizer();
         UpdateText(slider.value);
         slider.onValueChanged.AddListener(UpdateText);
     }
 
-    private void UpdateText(float _val)
+    public void UpdateText(float _val)
     {
         text.text = slider.value.ToString("00");
         pixelSize = (int)_val;
         Pixelate();
+
+        
     }
 
     public void Pixelate()
     {
-        pixelizeMaterial.SetTexture("_MainTex", dynamicPixelizer.Pixelize(texture, pixelSize));
+        if(inputTexture != null)
+        {
+            outputTexture.texture = dynamicPixelizer.Pixelize(inputTexture, pixelSize);
+            swapper.inputTexture = outputTexture.texture;
+
+            if (SourceTexture.texture != inputTexture)
+            {
+                SourceTexture.texture = inputTexture;
+            }
+        }
+        
     }
 
-    public void UpdateTexture()
-    {
-        dynamicPixelizer = new DynamicPixelizer();
-    }
+
 }

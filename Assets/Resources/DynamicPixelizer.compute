@@ -20,9 +20,9 @@ void Pixelize (uint2 id : SV_DispatchThreadID)
 {
     float4 color = _Source[id];
     uint2 localizedCoords = GetLocalizedCoords(id);
-    InterlockedAdd(_ResultR[localizedCoords], (int)(color.r * 100000));
-    InterlockedAdd(_ResultG[localizedCoords], (int)(color.g * 100000));
-    InterlockedAdd(_ResultB[localizedCoords], (int)(color.b * 100000));
+    InterlockedAdd(_ResultR[localizedCoords], (int)(color.r * 10000));
+    InterlockedAdd(_ResultG[localizedCoords], (int)(color.g * 10000));
+    InterlockedAdd(_ResultB[localizedCoords], (int)(color.b * 10000));
 }
 
 [numthreads(32,32,1)]
@@ -31,8 +31,8 @@ void ReadPixelized (uint2 id : SV_DispatchThreadID)
     float alpha = _Source[id].a;
     uint2 localizedCoords = GetLocalizedCoords(id);
     
-    float colorR = (float)_ResultR[localizedCoords] / (float)100000 / _PixelSize / _PixelSize;
-    float colorG = (float)_ResultG[localizedCoords] / (float)100000 / _PixelSize / _PixelSize;
-    float colorB = (float)_ResultB[localizedCoords] / (float)100000 / _PixelSize / _PixelSize;
+    float colorR = (float)_ResultR[localizedCoords] / (float)10000 / _PixelSize / _PixelSize;
+    float colorG = (float)_ResultG[localizedCoords] / (float)10000 / _PixelSize / _PixelSize;
+    float colorB = (float)_ResultB[localizedCoords] / (float)10000 / _PixelSize / _PixelSize;
     _Source[id] = float4(colorR, colorG, colorB, alpha);
 }
