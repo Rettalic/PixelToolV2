@@ -127,17 +127,4 @@ public class BrushManager : MonoBehaviour
     {
         drawSize = size;
     }
-    
-    /*
-    // Due to the limitations of the unity OnClick event, a conversion from a string to a color variable is needed.
-    public void SetBrushColor(string hex)
-    {
-        var parse = ColorUtility.TryParseHtmlString(hex, out var color);
-        if (!parse)
-        {
-            Debug.Log("<color=red>Error: </color> Could not convert string " + hex + " to color");
-            return;
-        }
-        drawColour = color;
-    }*/
 }

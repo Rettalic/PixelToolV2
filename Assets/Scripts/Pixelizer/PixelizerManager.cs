@@ -9,12 +9,17 @@ public class PixelizerManager : MonoBehaviour
 {
     private DynamicPixelizer dynamicPixelizer;
     [SerializeField] private int pixelSize;
+    public DrawingCanvas drawCanvas;
     public PaletteSwapper swapper;
+    private byte[] pixels;
+
+    public Vector2Int imgSize;
 
 
     public Texture inputTexture;    //Texture you import
     public RawImage SourceTexture;  //Original img
     public RawImage outputTexture;  //Pixelate img
+
 
     public TMP_Text text;
     public Slider slider;
@@ -41,14 +46,13 @@ public class PixelizerManager : MonoBehaviour
         {
             outputTexture.texture = dynamicPixelizer.Pixelize(inputTexture, pixelSize);
             swapper.inputTexture = outputTexture.texture;
+            
+            
 
             if (SourceTexture.texture != inputTexture)
             {
                 SourceTexture.texture = inputTexture;
             }
         }
-        
     }
-
-
 }

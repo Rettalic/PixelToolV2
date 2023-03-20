@@ -6,7 +6,8 @@ using UnityEngine;
 public class DrawingCanvas : MonoBehaviour
 {
     [SerializeField] private Vector2Int canvasScale;
-    private Texture2D texture;
+  
+    public Texture2D texture;
     
     private void Start()
     {
@@ -22,7 +23,7 @@ public class DrawingCanvas : MonoBehaviour
             filterMode = FilterMode.Point,
         };
 
-        var pixels = Enumerable.Repeat(Color.white, texture.width * texture.height).ToArray();
+        Color[] pixels = Enumerable.Repeat(Color.white, texture.width * texture.height).ToArray();
         texture.SetPixels(pixels);
         texture.Apply();
 
@@ -36,7 +37,22 @@ public class DrawingCanvas : MonoBehaviour
     
     public void LoadTexture(byte[] data)
     {
-        texture.LoadImage(data);
+        if(data != null)
+        {
+            texture.LoadImage(data);
+        }
+    }
+    public void LoadTexture(RenderTexture data)
+    {
+        if (data != null)
+        {            
+            RenderTexture.active = data;
+            Texture2D tex = new Texture2D(1024, 1024);
+            tex.ReadPixels(new Rect(0, 0, 1024, 1024), 0, 0);
+            tex.Apply();
+            RenderTexture.active = null;
+
+        }
     }
 
     public Texture2D GetTexture()

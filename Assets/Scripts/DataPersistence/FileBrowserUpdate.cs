@@ -14,6 +14,8 @@ public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
     public RawImage rawImage2;
     public byte[] imgData;
 
+    public DrawingCanvas drawCanvas;
+
     public void OpenFileBrowser()
     {
         var bp = new BrowserProperties();
@@ -40,11 +42,12 @@ public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
             }
             else
             {
-                var uwrTexture = DownloadHandlerTexture.GetContent(uwr);
+                Texture2D uwrTexture = DownloadHandlerTexture.GetContent(uwr);
                 // rawImage.texture = uwrTexture;
                 imgData = uwrTexture.EncodeToPNG();
                 PixelizerManager.inputTexture = uwrTexture;  
                 PixelizerManager.Pixelate();
+                drawCanvas.LoadTexture(imgData);
             }
 #pragma warning restore CS0618 // Type or member is obsolete
         }
@@ -63,6 +66,7 @@ public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
             tex.LoadImage(imgData);
             PixelizerManager.inputTexture = tex;
             PixelizerManager.Pixelate();
+            
         }
     }
 
