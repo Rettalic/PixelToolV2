@@ -33,6 +33,7 @@ public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
         {
             yield return uwr.SendWebRequest();
 
+#pragma warning disable CS0618 // Type or member is obsolete
             if (uwr.isNetworkError || uwr.isHttpError)
             {
                 Debug.Log(uwr.error);
@@ -45,6 +46,7 @@ public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
                 PixelizerManager.inputTexture = uwrTexture;  
                 PixelizerManager.Pixelate();
             }
+#pragma warning restore CS0618 // Type or member is obsolete
         }
     }
 
