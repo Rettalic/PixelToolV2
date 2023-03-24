@@ -11,8 +11,7 @@ public class PixelizerManager : MonoBehaviour
     [SerializeField] private int pixelSize;
     public DrawingCanvas drawCanvas;
     public PaletteSwapper swapper;
-    private byte[] pixels;
-
+  
     public Vector2Int imgSize;
 
 
