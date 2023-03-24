@@ -5,14 +5,18 @@ using UnityEngine;
 
 public class DrawingCanvas : MonoBehaviour
 {
-    [SerializeField] private Vector2Int canvasScale;
+    [SerializeField] public Vector2Int canvasScale;
   
     public Texture2D texture;
-    
+    public BoxCollider2D collider;
+    public SpriteRenderer spriteRenderer;
+       
     private void Start()
     {
-        SpriteRenderer rawImage = GetComponent<SpriteRenderer>();
-        rawImage.sprite = GenerateSprite(canvasScale.x, canvasScale.y);
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = GenerateSprite(canvasScale.x, canvasScale.y);
+        spriteRenderer.size = new Vector2(canvasScale.x, canvasScale.y);
+
     }
 
     private Sprite GenerateSprite(int width, int height)
@@ -31,27 +35,37 @@ public class DrawingCanvas : MonoBehaviour
         Sprite sprite = Sprite.Create(texture, spriteRect, Vector2.one * 0.5f, width);
         sprite.name =  "Sprite";
 
+        
         return sprite;
     }
 
-    
+    private void Update()
+    {
+        var bounds =  spriteRenderer.sprite.bounds;
+        var factor = 5 / bounds.size.y;
+        transform.localScale = new Vector3(factor, factor, factor);
+    }
+
+    private Texture2D GenerateTex(int width, int height)
+    {
+        texture = new Texture2D(width, height)
+        {
+            name = name,
+            filterMode = FilterMode.Point,
+        };
+
+       
+
+        return texture;
+    }
+
+
     public void LoadTexture(byte[] data)
     {
         if(data != null)
         {
             texture.LoadImage(data);
-        }
-    }
-    public void LoadTexture(RenderTexture data)
-    {
-        if (data != null)
-        {            
-            RenderTexture.active = data;
-            Texture2D tex = new Texture2D(1024, 1024);
-            tex.ReadPixels(new Rect(0, 0, 1024, 1024), 0, 0);
-            tex.Apply();
-            RenderTexture.active = null;
-
+            spriteRenderer.size = new Vector2(canvasScale.x, canvasScale.y);
         }
     }
 

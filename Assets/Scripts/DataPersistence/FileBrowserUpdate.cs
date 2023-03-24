@@ -45,8 +45,8 @@ public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
                 Texture2D uwrTexture = DownloadHandlerTexture.GetContent(uwr);
                 // rawImage.texture = uwrTexture;
                 imgData = uwrTexture.EncodeToPNG();
-                PixelizerManager.inputTexture = uwrTexture;  
-                PixelizerManager.Pixelate();
+               // PixelizerManager.inputTexture = uwrTexture;  
+               // PixelizerManager.Pixelate();
                 drawCanvas.LoadTexture(imgData);
             }
 #pragma warning restore CS0618 // Type or member is obsolete
@@ -64,8 +64,8 @@ public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
         if (imgData != null)
         {
             tex.LoadImage(imgData);
-            PixelizerManager.inputTexture = tex;
-            PixelizerManager.Pixelate();
+          //  PixelizerManager.inputTexture = tex;
+          //  PixelizerManager.Pixelate();
             
         }
     }

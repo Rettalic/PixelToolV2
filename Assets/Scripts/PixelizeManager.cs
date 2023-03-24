@@ -7,13 +7,16 @@ using TMPro;
 public class PixelizeManager : MonoBehaviour
 {
     public  Texture2D sourceTexture;
-    private Texture2D inputTexture;
+    public Texture2D inputTexture;
     public RawImage outputImage;
 
     public TMP_Text text;
     public Slider slider;
 
     public int size;
+    public byte[] image;
+
+    public DrawingCanvas drawingCanvas;
 
 
     private void Awake()
@@ -50,5 +53,18 @@ public class PixelizeManager : MonoBehaviour
         Debug.Log(Mathf.Pow(2, _val));
         size = (Mathf.FloorToInt(Mathf.Pow(2, _val)));
         PixelizeImage();
+    }
+
+    public void updateBut()
+    {
+            Sprite sprite = Sprite.Create(inputTexture,
+            new Rect(0, 0, inputTexture.width, inputTexture.height),
+            new Vector2(0.5f, 0.5f) // Pivot point in the center of the sprite
+            );
+
+        // Apply the sprite to the SpriteRenderer
+
+        drawingCanvas.spriteRenderer.sprite = sprite;
+
     }
 }
