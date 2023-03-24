@@ -42,7 +42,7 @@ public class DrawingCanvas : MonoBehaviour
     private void Update()
     {
         var bounds =  spriteRenderer.sprite.bounds;
-        var factor = 5 / bounds.size.y;
+        var factor = 1 / bounds.size.y;
         transform.localScale = new Vector3(factor, factor, factor);
     }
 
