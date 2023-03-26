@@ -16,12 +16,12 @@ public class DrawingCanvas : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = GenerateSprite(canvasScale.x, canvasScale.y);
         spriteRenderer.size = new Vector2(canvasScale.x, canvasScale.y);
-
+        UpdateSize();
     }
 
-    private Sprite GenerateSprite(int width, int height)
+    private Sprite GenerateSprite(int _width, int _height)
     {
-        texture = new Texture2D(width, height)
+        texture = new Texture2D(_width, _height)
         {
             name = name,
             filterMode = FilterMode.Point,
@@ -32,33 +32,19 @@ public class DrawingCanvas : MonoBehaviour
         texture.Apply();
 
         Rect spriteRect = new Rect(0, 0, texture.width, texture.height);
-        Sprite sprite = Sprite.Create(texture, spriteRect, Vector2.one * 0.5f, width);
+        Sprite sprite = Sprite.Create(texture, spriteRect, Vector2.one * 0.5f, _width);
         sprite.name =  "Sprite";
 
         
         return sprite;
     }
 
-    private void Update()
+    public void UpdateSize()
     {
         var bounds =  spriteRenderer.sprite.bounds;
         var factor = 1 / bounds.size.y;
         transform.localScale = new Vector3(factor, factor, factor);
     }
-
-    private Texture2D GenerateTex(int width, int height)
-    {
-        texture = new Texture2D(width, height)
-        {
-            name = name,
-            filterMode = FilterMode.Point,
-        };
-
-       
-
-        return texture;
-    }
-
 
     public void LoadTexture(byte[] data)
     {
@@ -67,12 +53,5 @@ public class DrawingCanvas : MonoBehaviour
             texture.LoadImage(data);
             spriteRenderer.size = new Vector2(canvasScale.x, canvasScale.y);
         }
-    }
-
-    public Texture2D GetTexture()
-    {
-        return texture;
-    }
-
- 
+    } 
 }

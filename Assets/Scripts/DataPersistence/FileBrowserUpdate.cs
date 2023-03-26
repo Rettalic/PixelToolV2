@@ -9,9 +9,6 @@ using System.IO;
 
 public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
 {
-    public PixelizerManager PixelizerManager;
-    public RawImage rawImage1;
-    public RawImage rawImage2;
     public byte[] imgData;
 
     public DrawingCanvas drawCanvas;
@@ -29,13 +26,13 @@ public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
         });
     }
 
-    private IEnumerator LoadImage1(string path)
+    private IEnumerator LoadImage1(string _path)
     {
-        using (UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(path))
+        using (UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(_path))
         {
             yield return uwr.SendWebRequest();
 
-#pragma warning disable CS0618 // Type or member is obsolete
+        #pragma warning disable CS0618 // Type or member is obsolete
             if (uwr.isNetworkError || uwr.isHttpError)
             {
                 Debug.Log(uwr.error);
@@ -43,13 +40,10 @@ public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
             else
             {
                 Texture2D uwrTexture = DownloadHandlerTexture.GetContent(uwr);
-                // rawImage.texture = uwrTexture;
                 imgData = uwrTexture.EncodeToPNG();
-               // PixelizerManager.inputTexture = uwrTexture;  
-               // PixelizerManager.Pixelate();
                 drawCanvas.LoadTexture(imgData);
             }
-#pragma warning restore CS0618 // Type or member is obsolete
+        #pragma warning restore CS0618 // Type or member is obsolete
         }
     }
 

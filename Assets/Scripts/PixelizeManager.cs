@@ -23,10 +23,12 @@ public class PixelizeManager : MonoBehaviour
     {
         UpdateText(slider.value);
         slider.onValueChanged.AddListener(UpdateText);
+       
     }
 
     public void PixelizeImage()
     {
+
         inputTexture = new Texture2D((int)(size), (int)(size));
 
         float xScale = sourceTexture.width / (float)size;
@@ -45,6 +47,14 @@ public class PixelizeManager : MonoBehaviour
         inputTexture.filterMode = FilterMode.Point;
 
         outputImage.texture = inputTexture;
+
+        Sprite sprite = Sprite.Create(inputTexture,
+        new Rect(0, 0, inputTexture.width, inputTexture.height),
+        new Vector2(0.5f, 0.5f) // Pivot point in the center of the sprite
+        );
+
+        drawingCanvas.spriteRenderer.sprite = sprite;
+        drawingCanvas.UpdateSize();
     }
 
     public void UpdateText(float _val)
@@ -53,18 +63,5 @@ public class PixelizeManager : MonoBehaviour
         Debug.Log(Mathf.Pow(2, _val));
         size = (Mathf.FloorToInt(Mathf.Pow(2, _val)));
         PixelizeImage();
-    }
-
-    public void updateBut()
-    {
-            Sprite sprite = Sprite.Create(inputTexture,
-            new Rect(0, 0, inputTexture.width, inputTexture.height),
-            new Vector2(0.5f, 0.5f) // Pivot point in the center of the sprite
-            );
-
-        // Apply the sprite to the SpriteRenderer
-
-        drawingCanvas.spriteRenderer.sprite = sprite;
-
     }
 }
