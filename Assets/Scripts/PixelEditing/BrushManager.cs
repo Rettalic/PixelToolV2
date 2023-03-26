@@ -1,18 +1,30 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class BrushManager : MonoBehaviour
 {
     [SerializeField] public Color drawColour = Color.black;
-    [SerializeField] private int drawSize = 1;
+    public int drawSize = 1;
 
-    private Vector2Int texCoord;      
-    private Vector2Int lastTexCoord;
+    private Vector2Int textureCoord;      
+    private Vector2Int lastTexureCoord;
 
     private Color[] originalColour;
     private Color[] backupColour;
 
     private Texture2D texture;
     private RaycastHit2D hit;
+
+
+    public TMP_Text text;
+    public Slider slider;
+
+    private void Awake()
+    {
+        UpdateText(slider.value);
+        slider.onValueChanged.AddListener(UpdateText);
+    }
 
     private void Update()
     {
@@ -24,11 +36,8 @@ public class BrushManager : MonoBehaviour
             }
         }
 
-        if (!hit)
-        {
-            lastTexCoord = texCoord;
-        }
-
+        if (!hit) lastTexureCoord = textureCoord;
+        
         hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         if (hit)
         {
@@ -44,12 +53,12 @@ public class BrushManager : MonoBehaviour
                 coord.x *= texture.width;
                 coord.y *= texture.height;
 
-                texCoord.x = (int) coord.x;
-                texCoord.y = (int) coord.y;
+                textureCoord.x = (int) coord.x;
+                textureCoord.y = (int) coord.y;
                 
                 if (Input.GetMouseButton(0))
                 {
-                    PlotLine(lastTexCoord, texCoord, texture, drawColour);
+                    PlotLine(lastTexureCoord, textureCoord, texture, drawColour);
                     texture.Apply();
                 }
 
@@ -64,7 +73,7 @@ public class BrushManager : MonoBehaviour
     
     private void LateUpdate()
     {
-        lastTexCoord = texCoord;
+        lastTexureCoord = textureCoord;
     }
     
     private void DrawCommand(Color[] original, Color[] backup, Texture2D texture)
@@ -123,8 +132,9 @@ public class BrushManager : MonoBehaviour
         }
     }
 
-    public void SetBrushSize(int size)
+    public void UpdateText(float _val)
     {
-        drawSize = size;
+        text.text = slider.value.ToString("00");
+        drawSize = (int)_val;
     }
 }

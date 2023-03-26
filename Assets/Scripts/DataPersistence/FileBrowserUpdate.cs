@@ -1,17 +1,15 @@
 ﻿
 using AnotherFileBrowser.Windows;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
-using UnityEngine.UI;
-using System.IO;
 
 public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
 {
     public byte[] imgData;
 
     public DrawingCanvas drawCanvas;
+    public PixelizeManager pixelizeManager;
 
     public void OpenFileBrowser()
     {
@@ -22,11 +20,11 @@ public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
         new FileBrowser().OpenFileBrowser(bp, path =>
         {
             //Load image from local path with UWR
-            StartCoroutine(LoadImage1(path));
+            StartCoroutine(LoadImage(path));
         });
     }
 
-    private IEnumerator LoadImage1(string _path)
+    private IEnumerator LoadImage(string _path)
     {
         using (UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(_path))
         {
@@ -41,7 +39,7 @@ public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
             {
                 Texture2D uwrTexture = DownloadHandlerTexture.GetContent(uwr);
                 imgData = uwrTexture.EncodeToPNG();
-                drawCanvas.LoadTexture(imgData);
+                pixelizeManager.LoadTexture(imgData);
             }
         #pragma warning restore CS0618 // Type or member is obsolete
         }
@@ -57,10 +55,7 @@ public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
         Texture2D tex = new Texture2D(1, 1);
         if (imgData != null)
         {
-            tex.LoadImage(imgData);
-          //  PixelizerManager.inputTexture = tex;
-          //  PixelizerManager.Pixelate();
-            
+            tex.LoadImage(imgData);            
         }
     }
 

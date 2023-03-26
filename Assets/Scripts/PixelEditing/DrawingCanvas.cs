@@ -1,6 +1,4 @@
-using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class DrawingCanvas : MonoBehaviour
@@ -8,7 +6,6 @@ public class DrawingCanvas : MonoBehaviour
     [SerializeField] public Vector2Int canvasScale;
   
     public Texture2D texture;
-    public BoxCollider2D collider;
     public SpriteRenderer spriteRenderer;
        
     private void Start()

@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
 public class PixelizeManager : MonoBehaviour
 {
-    public  Texture2D sourceTexture;
+    public Texture2D sourceTexture;
     public Texture2D inputTexture;
     public RawImage outputImage;
 
@@ -21,9 +19,9 @@ public class PixelizeManager : MonoBehaviour
 
     private void Awake()
     {
-        UpdateText(slider.value);
-        slider.onValueChanged.AddListener(UpdateText);
-       
+       UpdateText(slider.value);
+       slider.onValueChanged.AddListener(UpdateText);
+       PixelizeImage();
     }
 
     public void PixelizeImage()
@@ -63,5 +61,13 @@ public class PixelizeManager : MonoBehaviour
         Debug.Log(Mathf.Pow(2, _val));
         size = (Mathf.FloorToInt(Mathf.Pow(2, _val)));
         PixelizeImage();
+    }
+
+    public void LoadTexture(byte[] _data)
+    {
+        if (_data != null)
+        {
+            sourceTexture.LoadImage(_data);
+        }
     }
 }

@@ -8,16 +8,11 @@ public static class CommandHandler
 
     public static void Add(ICommand _command)
     {
-        if (index < commands.Count)
-        {
-            commands.RemoveRange(index, commands.Count - index);
-        }
+        if (index < commands.Count) commands.RemoveRange(index, commands.Count - index);
 
         commands.Add(_command);
         _command.Execute();
         index++;
-
-        Debug.Log($"Added: {_command}");
     }
 
     public static void Undo()
@@ -25,7 +20,6 @@ public static class CommandHandler
         if (commands.Count == 0) return;
         if (index <= 0) return;
         commands[index - 1].Undo();
-        Debug.Log($"Undo: {commands[index - 1]}");
         index--;
     }
 
@@ -35,6 +29,5 @@ public static class CommandHandler
         if (index >= commands.Count) return;
         index++;
         commands[index - 1].Execute();
-        Debug.Log($"Redo: {commands[index - 1]}");
     }
 }
