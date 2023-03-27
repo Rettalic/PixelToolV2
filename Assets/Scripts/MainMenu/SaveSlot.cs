@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+
 using UnityEngine.UI;
 
 public class SaveSlot : MonoBehaviour
@@ -12,7 +12,7 @@ public class SaveSlot : MonoBehaviour
     [Header("Content")]
     [SerializeField] private GameObject noDataContent;
     [SerializeField] private GameObject hasDataContent;
-    [SerializeField] private TextMeshProUGUI projectName;
+    [SerializeField] private Text projectName;
 
     [Header("Clear Data Button")]
     [SerializeField] private Button clearButton;

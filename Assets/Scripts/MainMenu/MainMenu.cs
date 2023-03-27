@@ -13,6 +13,7 @@ public class MainMenu : Menu
     [SerializeField] private Button newToolButton;
     [SerializeField] private Button continueToolButton;
     [SerializeField] private Button loadToolButton;
+    [SerializeField] private Button quitToolButton;
 
     public int sceneIndex;
 
@@ -50,6 +51,12 @@ public class MainMenu : Menu
         // load the next scene - which will in turn load the game because of 
         // OnSceneLoaded() in the DataPersistenceManager
         SceneManager.LoadSceneAsync(sceneIndex);
+    }
+
+    public void OnQuitButtonClicked()
+    {
+        Application.Quit();
+        Debug.Log("Application Quit");
     }
 
     private void DisableMenuButtons() 
