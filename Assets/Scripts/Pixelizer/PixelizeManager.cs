@@ -15,13 +15,14 @@ public class PixelizeManager : MonoBehaviour
     public byte[] image;
 
     public DrawingCanvas drawingCanvas;
-
+    public ExportPng exportPng;
 
     private void Awake()
     {
        UpdateText(slider.value);
        slider.onValueChanged.AddListener(UpdateText);
        PixelizeImage();
+       exportPng = new ExportPng();
     }
 
     public void PixelizeImage()
@@ -69,5 +70,10 @@ public class PixelizeManager : MonoBehaviour
         {
             sourceTexture.LoadImage(_data);
         }
+    }
+
+    public void ExportPNG()
+    {
+        exportPng.SaveImageToFile(inputTexture);
     }
 }

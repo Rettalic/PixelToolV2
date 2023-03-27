@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public class ExportPng : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+public class ExportPng 
+{
+    public void SaveImageToFile(Texture2D _texture)
     {
-        Sprite itemBGSprite = Resources.Load<Sprite>("_Defaults/Item Images/_Background");
-        Texture2D itemBGTex = itemBGSprite.texture;
-        byte[] itemBGBytes = itemBGTex.EncodeToPNG();
-        File.WriteAllBytes(formattedCampaignPath + "/Item Images/Background.png", itemBGBytes);
+        string filePath = Application.dataPath + "/Results";
+        byte[] bytes = _texture.EncodeToPNG();
+        if (!Directory.Exists(filePath)) Directory.CreateDirectory(filePath);
+        filePath = filePath + "/Results" + ".png";
+        File.WriteAllBytes(filePath, bytes);
+        // Open File in saved location
+        filePath = filePath.Replace(@"/", @"\");
+        System.Diagnostics.Process.Start("explorer.exe", "/select," + filePath);
     }
 }
