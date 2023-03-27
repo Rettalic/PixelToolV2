@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class BrushManager : MonoBehaviour
 {
@@ -17,7 +16,7 @@ public class BrushManager : MonoBehaviour
     private RaycastHit2D hit;
 
 
-    public TMP_Text text;
+    public Text text;
     public Slider slider;
 
     private void Awake()

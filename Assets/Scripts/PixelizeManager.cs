@@ -8,7 +8,7 @@ public class PixelizeManager : MonoBehaviour
     public Texture2D inputTexture;
     public RawImage outputImage;
 
-    public TMP_Text text;
+    public Text text;
     public Slider slider;
 
     public int size;

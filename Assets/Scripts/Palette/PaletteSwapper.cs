@@ -6,7 +6,7 @@ public class PaletteSwapper : MonoBehaviour
 {
     public Shader paletteShader;
 
-    public Texture inputTexture;
+    public Texture2D inputTexture;
     public Texture colorPalette;
     public bool invert = false;
     

@@ -1,8 +1,8 @@
-﻿
-using AnotherFileBrowser.Windows;
+﻿using AnotherFileBrowser.Windows;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;   
 
 public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
 {
@@ -10,6 +10,7 @@ public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
 
     public DrawingCanvas drawCanvas;
     public PixelizeManager pixelizeManager;
+    public RawImage sourceImage;
 
     public void OpenFileBrowser()
     {
@@ -40,6 +41,8 @@ public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
                 Texture2D uwrTexture = DownloadHandlerTexture.GetContent(uwr);
                 imgData = uwrTexture.EncodeToPNG();
                 pixelizeManager.LoadTexture(imgData);
+                pixelizeManager.PixelizeImage();
+                sourceImage.texture = uwrTexture;
             }
         #pragma warning restore CS0618 // Type or member is obsolete
         }
