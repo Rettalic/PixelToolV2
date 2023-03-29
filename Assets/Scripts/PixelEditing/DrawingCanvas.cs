@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class DrawingCanvas : MonoBehaviour
 {
-    [SerializeField] public Vector2Int canvasScale;
+    public Vector2Int canvasScale;
   
     public Texture2D texture;
     public SpriteRenderer spriteRenderer;

@@ -21,7 +21,7 @@ public class Draw : ICommand
 
     public void Undo()
     {
-        if(texture.width * texture.height > backupColour.Length)  return; //check 
+        if(texture.width * texture.height > backupColour.Length)  return; 
         texture.SetPixels(backupColour);
         texture.Apply();
     }

@@ -10,8 +10,7 @@ public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
 
     public DrawingCanvas drawCanvas;
     public PixelizeManager pixelizeManager;
-    public RawImage sourceImage;
-
+ 
     public void OpenFileBrowser()
     {
         var bp = new BrowserProperties();
@@ -40,25 +39,11 @@ public class FileBrowserUpdate : MonoBehaviour, IDataPersistence
             {
                 Texture2D uwrTexture = DownloadHandlerTexture.GetContent(uwr);
                 imgData = uwrTexture.EncodeToPNG();
+    
                 pixelizeManager.LoadTexture(imgData);
                 pixelizeManager.PixelizeImage();
-                sourceImage.texture = uwrTexture;
             }
         #pragma warning restore CS0618 // Type or member is obsolete
-        }
-    }
-
-    private void Start()
-    {
-        LoadImage();    
-    }
-
-    public void LoadImage()
-    {
-        Texture2D tex = new Texture2D(1, 1);
-        if (imgData != null)
-        {
-            tex.LoadImage(imgData);            
         }
     }
 

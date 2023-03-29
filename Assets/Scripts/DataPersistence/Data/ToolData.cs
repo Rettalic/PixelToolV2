@@ -16,12 +16,12 @@ public class ToolData
     public byte[] imgBytes;
 
     // the values defined in this constructor will be the default values
-    // the tool starts with when there's no data to load
     public ToolData() 
     {
         projectName = "";
-        pixelateAmount = 0;
+        pixelateAmount = 1;
         imgBytes = null;
+
     }
 
     public string GetProjectName() 
