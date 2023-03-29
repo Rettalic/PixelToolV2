@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ToolData">
+    <Position X="24.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAIAAAAAQAAAAgAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DataPersistence\Data\ToolData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataPersistenceManager">
+    <Position X="31.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBAQABAAABgAAAACABAgAAAgIEBAAAIJEGAgKAAACEA=</HashCode>
+      <FileName>Assets\Scripts\DataPersistence\DataPersistenceManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileBrowserUpdate" BaseTypeListCollapsed="true">
+    <Position X="28.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAQAAQAAAAAAAAQAAAAAAAAAQAAAAAIIAA=</HashCode>
+      <FileName>Assets\Scripts\DataPersistence\FileBrowserUpdate.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FileDataHandler">
+    <Position X="28.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgKIAAAgAAABEAEAAAAAAAAEAIEAAAAAAAAAAACA=</HashCode>
+      <FileName>Assets\Scripts\DataPersistence\FileDataHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SerializableDictionary&lt;TKey, TValue&gt;" BaseTypeListCollapsed="true">
+    <Position X="30" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAIAAAAAAAAAAAAAABAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DataPersistence\SerializableTypes\SerializableDictionary.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ExportPng">
+    <Position X="23" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Export\ExportPng.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConfirmationPopupMenu" Collapsed="true">
+    <Position X="15.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAIAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\ConfirmationPopupMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CreateNewSaveSlot">
+    <Position X="30" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAIAAA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\CreateNewSaveSlot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoToMainMenu">
+    <Position X="16.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAIAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\GoToMainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMenu" Collapsed="true">
+    <Position X="20" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAACEFgAAAEIQAJAAgAgAAAAAAAAAAAAEBAAA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Menu" Collapsed="true">
+    <Position X="17.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveSlot">
+    <Position X="26.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAhAAQAAAAACAgAAAgAAAAAAAAAAgAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\SaveSlot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveSlotsMenu" Collapsed="true">
+    <Position X="17.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQwAAIAAAAAAIAAgAwAAEAAAAAAAAAEMAEA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\SaveSlotsMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SetProjectName" BaseTypeListCollapsed="true">
+    <Position X="30" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAMAAAQAAAAAAAAAAgQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\SetProjectName.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PaletteSwapper">
+    <Position X="16.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAABAQAQAgAAAABAAwAAAIAAIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Palette\PaletteSwapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BrushManager">
+    <Position X="14.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAABAgAIoIAAAAAJAAAAgAAAhAIAAAEAAAAAkA=</HashCode>
+      <FileName>Assets\Scripts\PixelEditing\BrushManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraController">
+    <Position X="12.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAEAAAAAAAAAAAEAAgAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PixelEditing\CameraController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColourPicker" BaseTypeListCollapsed="true">
+    <Position X="10.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAgAAgAgAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PixelEditing\ColourPicker.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CommandHandler">
+    <Position X="9" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAIABAAAAAAAAAABAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Assets\Scripts\PixelEditing\CommandHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Draw" BaseTypeListCollapsed="true">
+    <Position X="9" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAABIQAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PixelEditing\Draw.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DrawingCanvas">
+    <Position X="12.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACEAAAAACAAACAABAAAAAAAAAAAggAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PixelEditing\DrawingCanvas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PixelizeManager" BaseTypeListCollapsed="true">
+    <Position X="20.25" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAACgQAAQAgIAAAAQQEAAAAAAIEAAEAAAAQEA=</HashCode>
+      <FileName>Assets\Scripts\Pixelizer\PixelizeManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ToolSettings" BaseTypeListCollapsed="true">
+    <Position X="26.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAYBAQAAAAAAAAQAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Settings\ToolSettings.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UndoRedoManager">
+    <Position X="10.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UndoRedo\UndoRedoManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IDataPersistence" Collapsed="true">
+    <Position X="17.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DataPersistence\IDataPersistence.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ICommand" Collapsed="true">
+    <Position X="15.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UndoRedo\ICommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

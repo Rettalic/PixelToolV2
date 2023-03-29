@@ -17,7 +17,7 @@
   <Class Name="FileBrowserUpdate" BaseTypeListCollapsed="true">
     <Position X="17.5" Y="8" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AABAAAAAAAAQAAAAAAAAAAAQAAAAAAAACYgAAAAAIAA=</HashCode>
+      <HashCode>AABAAAAAAAAQAAQAAAAAAAAQAAAAAAAAAQAAAAAIIAA=</HashCode>
       <FileName>Assets\Scripts\DataPersistence\FileBrowserUpdate.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -40,7 +40,7 @@
   <Class Name="ConfirmationPopupMenu" Collapsed="true">
     <Position X="7" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQQAAAAAAAAAIAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAIAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Assets\Scripts\MainMenu\ConfirmationPopupMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -54,7 +54,7 @@
   <Class Name="MainMenu" Collapsed="true">
     <Position X="11.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAgAACAFgAAAEAQAJAAgAgAAAAAAAAAAAAEBAAA=</HashCode>
+      <HashCode>AAAAAAgAACEFgAAAEIQAJAAgAgAAAAAAAAAAAAEBAAA=</HashCode>
       <FileName>Assets\Scripts\MainMenu\MainMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -75,7 +75,7 @@
   <Class Name="SaveSlotsMenu" Collapsed="true">
     <Position X="9.25" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQwAAIAAAAAAIAAgAQAAEAAAAAAAAAEMAEA=</HashCode>
+      <HashCode>AAAAAAAAAQwAAIAAAAAAIAAgAwAAEAAAAAAAAAEMAEA=</HashCode>
       <FileName>Assets\Scripts\MainMenu\SaveSlotsMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -94,27 +94,6 @@
       <FileName>Assets\Scripts\Palette\PaletteSwapper.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PixelateEffect">
-    <Position X="15.25" Y="5" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAACgIAAAAACAAAAAAAAAAAAAIAAAEAAAAAAg=</HashCode>
-      <FileName>Assets\Scripts\PixelateEffect.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="DynamicPixelizer">
-    <Position X="15.25" Y="8" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAAAQAACCAAAAAAUAJAAAAAAAAAABACAAAAAAAAIAA=</HashCode>
-      <FileName>Assets\Scripts\Pixelizer\DynamicPixelizer.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="PixelizerManager">
-    <Position X="13.25" Y="8.75" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAQAgIAAAAAAAAAAAAAAAAAogIAAAEAAAAAEg=</HashCode>
-      <FileName>Assets\Scripts\Pixelizer\PixelizerManager.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ToolSettings" BaseTypeListCollapsed="true">
     <Position X="10.75" Y="8.25" Width="1.5" />
     <TypeIdentifier>
@@ -122,13 +101,6 @@
       <FileName>Assets\Scripts\Settings\ToolSettings.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="CommandManager">
-    <Position X="17.5" Y="5" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAQABAQAAAAAAAABAAAAAAAAAQAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\UndoRedo\CommandManager.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Interface Name="IDataPersistence">
     <Position X="13.5" Y="2.25" Width="1.5" />
